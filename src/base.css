@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Lilita One';
+  src: url('./assets/fonts/LilitaOne-Regular.ttf') format('truetype');
+}
+
+.lilita-text {
+  font-family: 'Lilita One', cursive;
+}
+
+page {
+  --head-height: 30px;
+  --large-px: 500px;
+
+  --small-rem: 0.8rem;
+  --basic-rem: 1rem;
+  --medium-rem-1: 1.125rem;
+  --medium-rem-2: 1.375rem;
+  --medium-rem-3: 1.675rem;
+  --large-rem: 2rem;
+
+  --dark: rgba(34, 34, 34);
+  --dark-0: rgba(34, 34, 34, 0);
+  --dark-10: rgba(34, 34, 34, .10);
+  --dark-50: rgba(34, 34, 34, .55);
+  --dark-60: rgba(34, 34, 34, .60);
+  --dark-mode: rgba(18, 18, 18);
+
+  --light: rgba(248, 249, 250);
+  --light-0: rgba(248, 249, 250, 0);
+  --light-10: rgba(248, 249, 250, .10);
+  --light-50: rgba(248, 249, 250, .55);
+  --light-60: rgba(248, 249, 250, .60);
+  --light-mode-one: rgba(243, 243, 243);
+  --light-mode-two: rgb(255,228,204);
+
+  --green-one: rgb(241, 253, 243);
+  --green-two: rgb(229, 244, 231);
+  --green-three: rgb(209, 233, 210);
+  --green-four: rgb(153, 205, 169);
+
+  --pink-one: rgb(249, 245, 246);
+  --pink-two: rgb(248, 232, 238);
+  --pink-three: rgb(253, 206, 223);
+  --pink-four: rgb(242, 190, 209);
+  --pink-five: rgba(254,198,208);
+
+  --purple-one: rgb(241, 241, 246);
+  --purple-two: rgb(225, 204, 236);
+  --purple-three: rgb(201, 182, 228);
+  --purple-four: rgb(190, 159, 225);
+}
