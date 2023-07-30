@@ -1,0 +1,22 @@
+@import "../../../base.css";
+
+.memorial_header {
+  font-family: 'kuaile', cursive;
+}
+
+.memorial_header .van-nav-bar__arrow,
+.memorial_header .van-nav-bar__text {
+  color: var(--pink-four) !important;
+}
+
+.memorial_items {
+  font-family: 'Lilita One', cursive;
+}
+
+.memorial_item {
+  width: 80%;
+  background-color: var(--pink-two);
+  margin: var(--basic-rem) auto;
+  border-radius: var(--basic-rem);
+}
+

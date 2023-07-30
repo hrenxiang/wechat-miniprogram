@@ -1,0 +1,23 @@
+@import '../../base.css';
+
+.navbar_view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: var(--dark);
+  z-index: 99;
+  background-color: var(--light-mode-one);
+}
+
+.navbar_title {
+  display: flex;
+  align-items: center;
+  gap: var(--small-rem);
+  padding-left: var(--basic-rem);
+}
+
+.navbar_title>text {
+  font-weight: 600;
+  font-size: var(--medium-rem-2);
+}

@@ -21,11 +21,24 @@ const config = {
     }
   },
   framework: 'react',
-  compiler: 'webpack5',
+  compiler: {
+    type: 'webpack5',
+    prebundle: {
+      enable: false
+    }
+  },
   cache: {
     enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
   },
   mini: {
+    webpackChain(chain) {
+      /**
+       * 如果 h5 端编译后体积过大，可以使用 webpack-bundle-analyzer 插件对打包体积进行分析。
+       * @docs https://github.com/webpack-contrib/webpack-bundle-analyzer
+       */
+      chain.plugin('analyzer')
+        .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin, [])
+    },
     miniCssExtractPluginOption: {
       //忽略css文件引入顺序
       ignoreOrder: true
@@ -50,7 +63,10 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
+    optimizeMainPackage: {
+      enable: true,
+    },
   },
   h5: {
     esnextModules: [/@antmjs[\/]vantui/],

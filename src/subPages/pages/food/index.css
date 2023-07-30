@@ -1,0 +1,26 @@
+@import "../../../base.css";
+
+.food_container {
+  background-color: var(--light-mode-one);
+}
+
+.food_header {
+  font-family: 'kuaile', cursive;
+}
+
+.food_header .van-nav-bar__arrow,
+.food_header .van-nav-bar__text {
+  color: var(--pink-four) !important;
+}
+
+.food_body {
+  padding: 0 var(--basic-rem);
+  padding-bottom: var(--large-rem);
+}
+
+.food_body image {
+  width: 100%;
+  height: calc((100vw - 2rem) * 0.75);
+  margin-bottom: var(--basic-rem);
+}
+

@@ -6,18 +6,11 @@
   padding: 0 var(--basic-rem);
   height: 100vh;
   font-family: 'kuaiLe', sans-serif;
-}
-
-.index_svg_container {
-  width: 100%;
-  height: calc(100vh - 20rem);
-  display: flex;
-  justify-content: center;
-}
-
-.index_svg_container > view {
-  width: 100%;
-  height: 100%;
+  background-image: url("https://huangrx.cn/img/mini-program-index.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  position: relative;
 }
 
 .index_text_container {
@@ -43,4 +36,17 @@
   font-size: var(--small-rem);
   font-weight: 400;
   color: var(--light-50);
+}
+
+.index_button {
+  position: absolute;
+  bottom: var(--percent-10);
+  left: var(--percent-50);
+  transform: translate(var(--percent-50-reverse), var(--percent-50-reverse));
+  border-radius: var(--large-rem);
+  padding: var(--basic-rem) var(--large-rem);
+  color: var(--light);
+  background-color: var(--light-20);
+  backdrop-filter: blur(5px);
+  width: var(--percent-80);
 }

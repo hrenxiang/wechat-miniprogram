@@ -1,0 +1,61 @@
+@import "../../base.css";
+
+.weather_container {
+  width: 100%;
+  color: var(--dark);
+  display: grid;
+}
+
+.weather_content {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--basic-rem);
+  font-size: var(--basic-rem);
+  line-height: var(--large-rem);
+}
+
+.weather_row_1 {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: var(--basic-rem);
+}
+
+.weather_city {
+  padding: var(--basic-rem) var(--basic-rem);
+  background-color: var(--purple-four);
+  border-radius: var(--basic-rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.weather_today {
+  padding: var(--basic-rem) var(--basic-rem);
+  background-color: var(--pink-four);
+  border-radius: var(--basic-rem);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.weather_suggest {
+  padding: var(--basic-rem) var(--basic-rem);
+  background-color: var(--green-four);
+  border-radius: var(--basic-rem);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.weather_item-header {
+  display: flex;
+  align-items: center;
+  gap: var(--small-rem);
+  font-weight: 600;
+  font-size: var(--basic-rem);
+}
+
+.weather_item_body {
+  font-size: var(--basic-rem);
+  font-weight: normal;
+}

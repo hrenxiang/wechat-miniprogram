@@ -6,8 +6,8 @@
     "es6": false,
     "enhance": false,
     "compileHotReLoad": false,
-    "postcss": false,
-    "minified": false,
+    "postcss": true,
+    "minified": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -16,7 +16,8 @@
     "coverView": false,
     "showShadowRootInWxmlPanel": false,
     "packNpmRelationList": [],
-    "ignoreUploadUnusedFiles": true
+    "ignoreUploadUnusedFiles": true,
+    "minifyWXSS": true
   },
   "compileType": "miniprogram",
   "srcMiniprogramRoot": "dist/",

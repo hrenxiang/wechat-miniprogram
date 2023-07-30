@@ -1,0 +1,1 @@
+const BASE_URL = process.env.NODE_ENV === 'production' ? 'https://xxx.com' : 'https://v1.hitokoto.cn/';

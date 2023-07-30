@@ -1,0 +1,14 @@
+@import "../../base.css";
+
+.footer_container {
+  background-color: var(--light-mode-one);
+}
+
+.footer_container > view {
+  background-color:var(--light-mode-one);
+  color: var(--dark) !important;
+}
+
+.footer_menu_active {
+  color: var(--pink-four);
+}

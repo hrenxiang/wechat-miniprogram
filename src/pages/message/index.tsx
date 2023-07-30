@@ -1,5 +1,5 @@
-import NavBar from "../../component/NavBar";
-import FooterBar from "../../component/FooterBar";
+import NavBar from "../../components/NavBar";
+import FooterBar from "../../components/FooterBar";
 import { View, Text } from "@tarojs/components"
 import "./index.css";
 

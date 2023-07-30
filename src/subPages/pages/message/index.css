@@ -1,0 +1,11 @@
+@import "../../../base.css";
+
+.message_container {
+  background-color: var(--light-mode-one);
+  color: var(--dark);
+  min-height: calc(100vh - 5rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

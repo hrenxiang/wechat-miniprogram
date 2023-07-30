@@ -1,0 +1,58 @@
+@import "../../../base.css";
+
+.letter_container {
+  padding: 0 var(--basic-rem);
+}
+
+.letter_header {
+  font-family: 'kuaile', cursive;
+}
+
+.letter_header .van-nav-bar__arrow,
+.letter_header .van-nav-bar__text {
+  color: var(--pink-four) !important;
+}
+
+.letter_items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--basic-rem);
+}
+
+.letter_item {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color: var(--pink-four);
+  padding: var(--basic-rem);
+  gap: var(--medium-rem-2);
+  border-radius: var(--small-rem);
+}
+
+.letter_item_header {
+  display: flex;
+  gap: var(--basic-rem);
+  align-items: center;
+}
+
+.letter_item_header_content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.letter_item_header_nickname {
+  font-weight: 600;
+  font-family: 'Lilita One', cursive;
+  font-size: var(--basic-rem);
+}
+
+.letter_item_header_date {
+  font-size: var(--small-rem);
+  color: var(--dark-50)
+}
+
+.letter_item_content {
+  font-size: var(--small-rem);
+  line-height: var(--medium-rem-2);
+}
