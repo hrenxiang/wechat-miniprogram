@@ -1,5 +1,5 @@
 import { useState, useRef } from "react"
-import { PullToRefresh, InfiniteScroll, NavBar, Toast } from "@antmjs/vantui"
+import { PullToRefresh, InfiniteScroll, NavBar } from "@antmjs/vantui"
 import { View, Image } from "@tarojs/components"
 import Taro from "@tarojs/taro";
 import "./index.css";
@@ -56,17 +56,16 @@ const Food = () => {
     <View className="food_container">
       <NavBar
         title="食物呀 🍔"
-        leftText="返回"
         leftArrow
         onClickLeft={() => Taro.navigateBack()}
         fixed={true}
-        className="food_header"
+        className="custom_header"
       />
       <View className="food_body" style={`paddingTop: ${paddingTopNum + 30}px; marginTop: 1rem`}>
         <PullToRefresh onRefresh={refresh}>
           <View className="food_image_items">
             {data.map((item, index) => (
-              <Image src={item} key={index} />
+              <Image src={item} key={index} className="food_image_item"/>
             ))}
             <InfiniteScroll loadMore={load} ref={InfiniteScrollInstance} />
           </View>

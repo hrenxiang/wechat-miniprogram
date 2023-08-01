@@ -1,0 +1,76 @@
+@import "../../base.css";
+
+.wx_acquire_container {
+  height: 100vh;
+  background-color: var(--light);
+  font-family: 'kuaile', cursive;
+}
+
+.wx_acquire_body {
+  width: calc(100vw - 4rem);
+  padding: var(--large-rem);
+  border-radius: var(--basic-rem) var(--basic-rem) 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+.wx_acquire_title {
+  margin: var(--large-rem) 0;
+  font-size: var(--basic-rem);
+}
+
+.wx_acquire_Button {
+  padding: var(--basic-rem);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light);
+}
+
+.wx_acquire_avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.wx_acquire_Button > text {
+  font-size: var(--basic-rem);
+}
+
+.wx_acquire_nickname {
+  margin: var(--large-rem) 0;
+  background-color: var(--light);
+  display: flex;
+  align-items: center;
+  gap: var(--basic-rem);
+}
+
+.wx_acquire_nickname > text {
+  font-size: var(--medium-rem-1);
+}
+
+.wx_acquire_nickname > input {
+  font-size: var(--basic-rem);
+  font-family: 'kuaile', cursive !important;
+  color: var(--dark);
+}
+
+.wx_acquire_bottom {
+  margin: var(--large-rem) 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--large-rem);
+}
+.wx_acquire_cancel {
+  width: 100%;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.wx_acquire_confirm {
+  width: 100%;
+  background-color: var(--pink-four);
+  color: var(--dark);
+}
+

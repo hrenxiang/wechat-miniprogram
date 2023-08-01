@@ -1,0 +1,6 @@
+@import "../../../base.css";
+
+.login_container {
+  min-height: 90vh;
+  background-color: var(--light-mode-one);
+}

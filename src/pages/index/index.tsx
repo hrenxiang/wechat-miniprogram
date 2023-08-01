@@ -3,11 +3,10 @@ import Taro from "@tarojs/taro";
 
 import "./index.css"
 
-
 const Index = () => {
   const paddingTopNum = wx.getSystemInfoSync().statusBarHeight + 7;
-
-  const clickStart = () => {
+  
+  const handlerStart = () => {
     Taro.reLaunch({
       url: "/subPages/pages/home/index"
     })
@@ -16,12 +15,7 @@ const Index = () => {
   return (
     <View className="index_body">
       <View style={`paddingTop: ${paddingTopNum + 30}px`}>
-        {/* <View className="index_text_container">
-          <Text className="index_text_one">世界上所有的相遇</Text>
-          <Text className="index_text_two">都是久别重逢</Text>
-          <Text className="index_text_three">愿岁月可回首，且以深情共白头。余生还长，请多多指教。</Text>
-        </View> */}
-        <Button className="index_button" onClick={clickStart}>Get Start !</Button>
+        <Button className="index_button" onClick={handlerStart}>Get Start !</Button>
       </View>
 
     </View>

@@ -9,10 +9,18 @@ export default defineAppConfig({
       root: "subPages",
       pages: [
         'pages/home/index',
-        'pages/message/index',
+        'pages/my/index',
         'pages/food/index',
         'pages/memorial/index',
         'pages/loveletter/index',
+        'pages/setting/index',
+        'pages/account/index',
+        'pages/privacy/index',
+        'pages/agreement/index',
+        'pages/about/index',
+        'pages/login/index',
+        'pages/register/index',
+        'pages/notice/index'
       ]
     }
   ],

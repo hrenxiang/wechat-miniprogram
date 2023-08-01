@@ -28,6 +28,12 @@ const Home = () => {
   const [initPage1] = useState(0)
   const onChange = () => { }
 
+  const showAllNotice = () => {
+    Taro.navigateTo({
+      url: "/subPages/pages/notice/index"
+    });
+  }
+
   return (
     <>
       <NavBar />
@@ -72,7 +78,7 @@ const Home = () => {
         <View className="home_notice_container">
             <View className="home_notice_header">
               <Text className="home_notice_header_title">公告板</Text>
-              <Button className="home_notice_header_button">查看全部</Button>
+              <Button className="home_notice_header_button" onClick={showAllNotice}>查看全部</Button>
             </View>
             <View className="home_notice_body">
               <View className="home_notice_body_text">

@@ -1,0 +1,100 @@
+@import "../../../base.css";
+
+.register_body {
+  height: 100vh;
+  background-color: var(--light-mode-one);
+  font-family: 'kuaile', cursive !important;
+  padding: var(--basic-rem);
+}
+
+.register_container {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.register_header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--basic-rem);
+}
+
+.register_header_title {
+  font-weight: 500;
+  font-size: var(--medium-rem-2);
+}
+
+.register_header_content {
+  font-size: var(--basic-rem);
+  color: var(--dark-60);
+}
+
+.register_form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--large-rem);
+}
+
+.register_form_item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--basic-rem);
+  padding: var(--basic-rem) 0;
+}
+
+.register_form_item input {
+  border: 1px solid var(--dark);
+  border-radius: var(--basic-rem);
+  padding: var(--medium-rem-2) var(--large-rem);
+}
+
+.register_form_agreement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--basic-rem) 0;
+}
+
+.register_agreement_a {
+  color: var(--pink-four);
+}
+
+.register_agreement_agree {
+  height: var(--basic-rem);
+  width: var(--large-rem);
+}
+
+.register_agreement_agree .van-switch__node {
+  height: var(--basic-rem);
+  width: var(--basic-rem);
+  
+}
+
+.register_form_agreement .van-switch--on .van-switch__node {
+  transform: translateX(var(--basic-rem)) !important;
+}
+
+.register_form_agreement .van-switch--on {
+  background-color: var(--pink-four) !important;
+}
+
+.register_form_login, .register_form_wx_login {
+  width: 100%;
+  background-color: var(--dark);
+  backdrop-filter: blur(5px);
+  color: var(--light);
+  border-radius: var(--small-rem);
+  padding: var(--small-rem) 0;
+  position: relative;
+  margin: var(--large-rem) 0;
+}
+
+.register_form_wx_login {
+  background-color: var(--pink-four);
+  color: black;
+}
+
+.register_form_or {
+  text-align: center;
+  font-size: var(--basic-rem);
+}

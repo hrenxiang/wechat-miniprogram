@@ -2,7 +2,7 @@
 import React, { FunctionComponent } from 'react';
 
 interface Props {
-  name: 'food' | 'temperature' | 'clothes' | 'city' | 'weather-suggest' | 'calendar' | 'weather' | 'message' | 'flower';
+  name: 'about' | 'arrow-right' | 'support' | 'setting' | 'account' | 'agreement' | 'manual-customer-service' | 'privacy' | 'problem-feedback' | 'share' | 'food' | 'temperature' | 'clothes' | 'city' | 'weather-suggest' | 'calendar' | 'weather' | 'message' | 'flower';
   size?: number;
   color?: string | string[];
   style?: React.CSSProperties;

@@ -1,0 +1,93 @@
+@import "../../../base.css";
+
+.account_container {
+  height: 100vh;
+  background-color: var(--light-mode-one);
+  font-family: 'kuaile', cursive !important;
+}
+
+.account_header {
+  background-color: var(--dark-mode);
+
+  border: none;
+}
+
+.account_header .van-nav-bar__arrow {
+  color: var(--light) !important;
+}
+
+.account_header .van-nav-bar__content ::after {
+  border: none !important;
+}
+
+.account_top {
+  --three-rem: calc(1.5 * var(--large-rem));
+  background-color: var(--dark-mode);
+  height:45vh;
+  border-radius: 0 0 var(--three-rem) var(--three-rem);
+  position: relative;
+}
+
+.account_top_content {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  width: 500px;
+  height: 300px;
+  background: linear-gradient(to right, rgb(10, 44, 64), rgb(51, 31, 55), rgb(26, 15, 61));
+  transform: translate(-50%, -50%);
+  filter: blur(70px);
+  z-index: 2;
+}
+
+.account_center_image {
+  border-radius: var(--basic-rem);
+  width: 30vw;
+  height: 30vw;
+  position: absolute;
+  top: 36vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.account_center_nickname {
+  --distance-top: calc(36vh + 30vw);
+  position: absolute;
+  top: var(--distance-top);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: var(--large-rem);
+}
+
+.account_bottom {
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--large-rem);
+}
+
+.account_bottom button {
+  width: 80vw;
+  background-color: var(--dark);
+  backdrop-filter: blur(5px);
+  color: var(--light);
+  border-radius: var(--small-rem);
+  padding: var(--small-rem) 0;
+  position: relative;
+}
+
+.account_bottom button iconfont {
+  position: absolute;
+  top: 50%;
+  right: var(--basic-rem);
+  transform: translateY(-50%);
+}

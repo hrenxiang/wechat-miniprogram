@@ -1,0 +1,53 @@
+@import "../../../base.css";
+
+.notice_container {
+  background-color: var(--light-mode-one);
+  padding: var(--basic-rem);
+  min-height: 90vh;
+}
+
+.notice_body {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+  gap: var(--basic-rem);
+  padding: var(--basic-rem);
+  margin: var(--large-rem) 0;
+  border: 1px dotted var(--dark);
+  border-radius: var(--basic-rem);
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.notice_body_text {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+  gap: var(--small-rem);
+  font-size: var(--small-rem);
+}
+
+.notice_body_text_date {
+  color: var(--light-60);
+}
+
+.notice_body_text_content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+}
+
+.notice_body_image_container {
+  display: flex;
+  justify-self: end;
+}
+
+.notice_body_image {
+  margin-left: auto;
+}
+
+.notice_body_image>image {
+  border-radius: 10px;
+}

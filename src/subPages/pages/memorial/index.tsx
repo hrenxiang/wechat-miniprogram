@@ -24,11 +24,10 @@ const Memorial = () => {
     <View className="memorial_container" style={`paddingTop: ${paddingTopNum + 30}px; marginTop: 1rem`} >
       <NavBar
         title="好日子 ⏳"
-        leftText="返回"
         leftArrow
         onClickLeft={() => Taro.navigateBack()}
         fixed={true}
-        className="memorial_header"
+        className="custom_header"
       />
       
       <View className="memorial_items">

@@ -52,3 +52,27 @@ page {
   --purple-three: rgb(201, 182, 228);
   --purple-four: rgb(190, 159, 225);
 }
+
+button {
+  border: none;
+}
+
+button::after {
+  border: none;
+}
+
+.custom_header {
+  font-family: 'kuaile', cursive;
+  background-color: var(--light-mode-one);
+}
+
+.van-nav-bar__arrow,
+.van-nav-bar__text {
+  color: var(--dark) !important;
+}
+
+.van-hairline--bottom::after {
+  /* prettier-ignore */
+  border-bottom-width: 0 !important;
+}
+

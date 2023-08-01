@@ -14,7 +14,7 @@ const FooterBar = () => {
 
   const switchMenu = (active_num: number) => {
     Taro.reLaunch({
-      url: active_num === 1 ? "/subPages/pages/home/index" : "/subPages/pages/message/index"
+      url: active_num === 1 ? "/subPages/pages/home/index" : "/subPages/pages/my/index"
     })
 
     dispatch(

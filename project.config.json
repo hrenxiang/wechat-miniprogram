@@ -3,8 +3,8 @@
   "description": "我们的爱情小屋",
   "setting": {
     "urlCheck": true,
-    "es6": false,
-    "enhance": false,
+    "es6": true,
+    "enhance": true,
     "compileHotReLoad": false,
     "postcss": true,
     "minified": true,
