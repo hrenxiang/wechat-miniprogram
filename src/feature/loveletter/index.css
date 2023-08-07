@@ -1,0 +1,130 @@
+@import "../../base.css";
+
+.letter_container {
+  background-color: var(--green-four);
+  min-height: 100vh;
+}
+
+.letter_navbar {
+  background-color: initial !important;
+  color: var(--light) !important;
+}
+
+.letter_navbar .van-nav-bar__arrow,
+.letter_navbar .van-nav-bar__title {
+  color: var(--dark) !important;
+}
+
+.letter_body {
+  padding-top: var(--large-rem);
+}
+
+.letter_body_header {
+  background-color: var(--green-four);
+  display: flex;
+  flex-direction: column;
+  gap: var(--large-rem);
+  align-items: center;
+  justify-content: center;
+  padding-bottom: var(--large-rem);
+}
+
+.letter_body_header_image {
+  width: 100%;
+  height: 20vh;
+  z-index: 2;
+}
+
+.letter_body_header>button {
+  background-image: linear-gradient(120deg, var(--green-three) 0%, var(--green-four) 100%);
+  color: var(--light) !important;
+  z-index: 2;
+  width: 50vw;
+  border: 1px solid var(--dark);
+  border-radius: var(--large-rem);
+  backdrop-filter: blur(5px);
+}
+
+.letter_body>van-pull-to-refresh {
+  background-color: var(--light-mode-one);
+}
+
+.letter_items {
+  background-color: var(--light-mode-one);
+  padding: var(--large-rem) 0;
+  position: relative;
+  min-height: 60vh;
+  overflow: hidden;
+}
+
+.letter_items::after {
+  content: '';
+  width: 150vw;
+  height: 150vw;
+  border-radius: 50%;
+  position: absolute;
+  top: -130vw;
+  left: -25vw;
+  background-color: var(--green-four);
+  overflow: hidden;
+}
+
+.letter_items_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.letter_items_body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20vw;
+}
+
+.letter_item {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: var(--basic-rem);
+  border-radius: var(--small-rem);
+  animation: bounce-in-top 1.5s both;
+}
+
+.letter_item_header {
+  display: flex;
+  gap: var(--basic-rem);
+  align-items: center;
+  background-color: var(--dark-mode);
+  color: var(--light);
+  padding: var(--small-rem) 0 var(--small-rem) var(--small-rem);
+  border-left: 10px solid var(--green-four);
+  border-radius: var(--small-rem) var(--small-rem) 0 0;
+}
+
+.letter_item_header_content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.letter_item_header_nickname {
+  font-weight: 500;
+  font-family: 'Lilita One', cursive !important;
+  font-size: var(--small-rem);
+}
+
+.letter_item_header_date {
+  font-size: 0.675rem;
+  color: var(--light-50)
+}
+
+.letter_item_content {
+  font-size: var(--small-rem);
+  line-height: var(--medium-rem-2);
+  color: var(--dark-mode);
+  background-color: var(--light);
+  padding: var(--small-rem);
+  border-bottom: 1px solid var(--dark-60);
+  border-right: 1px solid var(--dark-60);
+  border-left: 10px solid var(--green-four);
+  border-radius: 0 0 var(--small-rem) var(--small-rem);
+}

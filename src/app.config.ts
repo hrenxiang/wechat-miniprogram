@@ -6,21 +6,44 @@ export default defineAppConfig({
   ],
   subPackages: [
     {
-      root: "subPages",
+      root: "subpage",
       pages: [
-        'pages/home/index',
-        'pages/my/index',
-        'pages/food/index',
-        'pages/memorial/index',
-        'pages/loveletter/index',
-        'pages/setting/index',
-        'pages/account/index',
-        'pages/privacy/index',
-        'pages/agreement/index',
-        'pages/about/index',
-        'pages/login/index',
-        'pages/register/index',
-        'pages/notice/index'
+        'home/index',
+        'my/index',
+        'notice/index',
+      ]
+    },
+    {
+      root: "publish",
+      pages: [
+        'loveletter/index',
+        'memorial/index',
+        'daily/index'
+      ]
+    },
+    {
+      root: "settings",
+      pages: [
+        'setting/index',
+        'account/index',
+        'privacy/index',
+        'agreement/index',
+        'about/index',
+      ]
+    },
+    {
+      root: "user",
+      pages: [
+        'login/index',
+        'register/index',
+      ]
+    },
+    {
+      root: "feature",
+      pages: [
+        'daily/index',
+        'memorial/index',
+        'loveletter/index',
       ]
     }
   ],

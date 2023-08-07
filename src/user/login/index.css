@@ -1,0 +1,102 @@
+@import "../../base.css";
+
+.login_container {
+  background-color: var(--light-mode-one);
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--large-rem);
+  padding: var(--basic-rem);
+}
+
+.login_form_item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--basic-rem);
+  padding: var(--basic-rem) 0;
+}
+
+.login_form_item > text {
+  font-weight: 600;
+  font-size: var(--basic-rem);
+}
+
+.login_form_item input {
+  border: 1px solid var(--dark);
+  border-radius: var(--px-15);
+  padding: var(--basic-rem) var(--large-rem);
+  font-size: var(--basic-rem);
+}
+
+.login_form_agreement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--basic-rem) 0;
+}
+
+.login_agreement_a {
+  color: var(--pink-four);
+}
+
+.login_agreement_agree {
+  height: var(--basic-rem);
+  width: var(--large-rem);
+}
+
+.login_agreement_agree .van-switch__node {
+  height: var(--basic-rem);
+  width: var(--basic-rem);
+  
+}
+
+.login_form_agreement .van-switch--on .van-switch__node {
+  transform: translateX(var(--basic-rem)) !important;
+}
+
+.login_form_agreement .van-switch--on {
+  background-color: var(--pink-four) !important;
+}
+
+.login_form_login, .login_form_wx_login {
+  width: 100%;
+  background-color: var(--dark);
+  backdrop-filter: blur(5px);
+  color: var(--light);
+  border-radius: var(--px-15);
+  padding: var(--small-rem) 0;
+  position: relative;
+  margin: var(--medium-rem-2) 0;
+}
+
+.login_header {
+  margin-top: var(--percent-15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_header_flower {
+  background-image: url("https://huangrx.cn/svg/flower.svg");
+  width: 25vw;
+  height: 25vw;
+}
+
+.login_header_content {
+  font-size: var(--medium-rem-2);
+  margin: var(--large-rem);
+}
+
+.login_form_item_password_body {
+  position: relative;
+}
+
+.login_form_item_password_eye {
+  position: absolute;
+  bottom: 50%;
+  right: 0.5rem;
+  transform: translateY(50%);
+}

@@ -1,0 +1,106 @@
+@import '../../base.css';
+
+.home_body {
+  background-color: var(--light-mode-one);
+  padding: var(--basic-rem);
+  min-height: 100vh;
+  padding-bottom: 10vh;
+}
+
+.home_header_body {
+  border-radius: var(--basic-rem);
+}
+
+.home_menu_items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: var(--light-mode-one);
+  margin: var(--large-rem) 0;
+  padding: var(--large-rem) 0;
+  border-radius: var(--basic-rem);
+  background-color: var(--dark-mode);
+}
+
+.home_menu_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--small-rem);
+}
+
+.home_menu_item :hover {
+  cursor: pointer;
+}
+
+.home_menu_active > .home_menu_text {
+  color: var(--pink-four);
+}
+
+.home_notice_container {
+  margin: var(--large-rem) 0;
+  padding: var(--basic-rem);
+  background-color: var(--dark);
+  border-radius: var(--basic-rem);
+  color: var(--light);
+}
+
+.home_notice_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 var(--basic-rem) 0;
+
+}
+
+.home_notice_header_title {
+  font-weight: 600;
+  font-size: var(--basic-rem);
+}
+
+.home_notice_header_button {
+  margin: 0;
+  font-size: 0.675rem;
+  border: 1px solid var(--dark);
+  border-radius: var(--basic-rem);
+}
+
+.home_notice_body {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: var(--basic-rem);
+  padding: var(--basic-rem) 0 var(--large-rem) 0;
+}
+
+.home_notice_body_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--small-rem);
+  font-size: var(--small-rem);
+}
+
+.home_notice_body_text_date {
+ color: var(--light-50);
+}
+
+.home_notice_body_text_content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+}
+
+.home_notice_body_image_container {
+  display: flex;
+  justify-self: end;
+}
+
+.home_notice_body_image {
+  margin-left: auto;
+}
+
+.home_notice_body_image > image {
+  border-radius: 10px;
+}

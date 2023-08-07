@@ -1,65 +1,80 @@
 import { View, Button, Image, Input, Text } from "@tarojs/components"
 import Taro from "@tarojs/taro";
-import { useEffect, useState } from "react"
-import { UserProfile } from "../../type/user"
+import { useState } from "react"
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../store/reducers/RootReducer";
+import { saveUser } from "../../api/service/ApiService";
+import { RoleType, UserInfoParam } from "../../type/user"
 
 import "./index.css";
+import { setUserProfile } from "../../store/action/UserActions";
+import { BASE_URL } from "../../api/service/ApiService";
 
 const WxAvatarAndName = () => {
   const paddingTopNum = wx.getSystemInfoSync().statusBarHeight + 7;
-  const [avatarUrl, setAvatarUrl] = useState<string>("https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0")
-  const [nickname, setNickName] = useState<string>("")
-  const [userProfile, setUserProfile] = useState<UserProfile>({avatar: '', nickname: ''})
+  const [userInfoParam, setUserInfoParam] = useState<UserInfoParam>({
+    avatar: 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0',
+    nickname: '',
+    openid: ''
+  })
+
+  const { openid } = useSelector((state: IRootState) => state.user);
+  const dispatch = useDispatch();
+
   const onChooseAvatar = (e) => {
     const { avatarUrl } = e.detail
-    setAvatarUrl(avatarUrl)
-    setUserProfile({
-      avatar: avatarUrl,
-      nickname: userProfile.nickname
-    })
+    setUserInfoParam((prev) => ({
+      ...prev,
+      avatar: avatarUrl
+    }));
   }
   const handleNicknameChange = (e) => {
-    setNickName(e.detail.value);
-    setUserProfile({
-      avatar: userProfile.avatar,
+    setUserInfoParam((prev) => ({
+      ...prev,
       nickname: e.detail.value
-    })
+    }));
   };
   const cancel = () => {
     Taro.reLaunch({
-      url: "/subPages/pages/home/index"
+      url: "/subpage/home/index"
     });
   }
   const accredit = () => {
-    Taro.setStorage({
-      key: "UserProfile",
-      data: JSON.stringify(userProfile)
+    Taro.uploadFile({
+      url: `${BASE_URL}/user/wx/upload`, //仅为示例，非真实的接口地址
+      filePath: userInfoParam.avatar,
+      name: 'file',
+      formData: {
+        'user': 'test'
+      },
+      success(res) {
+        const response = JSON.parse(res.data)
+        const updatedUserInfo = {
+          ...userInfoParam,
+          avatar: response.data,
+          openid: openid
+        };
+        saveUser(updatedUserInfo).then((res) => {
+          if (res.code === 0) {
+            dispatch(
+              setUserProfile({
+                avatar: response.data,
+                nickname: userInfoParam.nickname,
+                mobile: '',
+                role: RoleType.GUEST,
+                openid: openid,
+                id: res.data
+              })
+            );
+
+            Taro.reLaunch({
+              url: "/subpage/my/index"
+            });
+          }
+        })
+      }
     })
-
-    Taro.reLaunch({
-      url: "/subPages/pages/my/index"
-    });
   }
-
-  useEffect(() => {
-
-    // // 获取用户登录凭证code，并发送请求获取openid
-    // Taro.login({
-    //   success: async (res) => {
-    //     if (res.code) {
-    //       // 发送请求获取openid
-    //       // const response = await get("http://localhost:8080/user/jscode2session", {code: res.code})
-    //       // const openid = response.data.openid;
-    //       console.log('用户的openid:', res.code);
-    //     } else {
-    //       console.log('获取用户登录态失败！', res.errMsg);
-    //     }
-    //   },
-    //   fail: (err) => {
-    //     console.log('登录失败！', err);
-    //   },
-    // });
-  }, [])
 
   return (
     <View className="wx_acquire_container">
@@ -67,12 +82,12 @@ const WxAvatarAndName = () => {
       <View className="wx_acquire_body" style={`paddingTop: ${paddingTopNum + 30}px;  marginTop: 1rem`}>
         <Text className="wx_acquire_title">获取用户头像及昵称</Text>
         <Button className="wx_acquire_Button" openType="chooseAvatar" onChooseAvatar={onChooseAvatar}>
-          <Image className="wx_acquire_avatar" src={avatarUrl}></Image>
+          <Image className="wx_acquire_avatar" src={userInfoParam.avatar}></Image>
           <Text>请选择</Text>
         </Button>
         <View className="wx_acquire_nickname">
           <Text>昵称：</Text>
-          <Input type="nickname" value={nickname} onInput={handleNicknameChange} placeholder="请输入昵称" />
+          <Input type="nickname" value={userInfoParam.nickname} onInput={handleNicknameChange} placeholder="请输入昵称" />
         </View>
         <View>
         </View>

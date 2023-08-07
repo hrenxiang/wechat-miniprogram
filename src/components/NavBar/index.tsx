@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <View className="navbar_view" style={`paddingTop: ${paddingTopNum}px; height: 30px; paddingBottom: 1rem`}>
       <View className="navbar_title">
-        <Text className="lilita-text">Love Cottage</Text>
+        <Text style={{fontFamily: "'Lilita One', cursive"}}>Love Cottage</Text>
         <IconFont name="flower" size="48"></IconFont>
       </View>
     </View>

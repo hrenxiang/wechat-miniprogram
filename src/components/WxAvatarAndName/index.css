@@ -3,7 +3,6 @@
 .wx_acquire_container {
   height: 100vh;
   background-color: var(--light);
-  font-family: 'kuaile', cursive;
 }
 
 .wx_acquire_body {
@@ -52,7 +51,6 @@
 
 .wx_acquire_nickname > input {
   font-size: var(--basic-rem);
-  font-family: 'kuaile', cursive !important;
   color: var(--dark);
 }
 

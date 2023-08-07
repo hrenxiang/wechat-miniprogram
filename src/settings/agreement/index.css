@@ -1,0 +1,33 @@
+@import "../../base.css";
+
+.agreement_container {
+  padding: var(--basic-rem) var(--basic-rem) calc(3 * var(--large-rem)) var(--basic-rem) ;
+  background-color: var(--light-mode-one);
+  min-height: 90vh;
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  gap: calc(1.5 * var(--large-rem));
+  line-height: var(--large-rem);
+}
+
+.agreement_title {
+  font-weight: 600;
+  font-size: var(--basic-rem);
+}
+
+.agreement_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--basic-rem);
+}
+
+.agreement_subtitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.agreement_sub_content {
+  display: flex;
+  flex-direction: column;
+}

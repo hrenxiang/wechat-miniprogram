@@ -1,6 +1,6 @@
 Component({
   props: {
-    // about | arrow-right | support | setting | account | agreement | manual-customer-service | privacy | problem-feedback | share | food | temperature | clothes | city | weather-suggest | calendar | weather | message | flower
+    // visibility_off | visibility | about | arrow-right | support | setting | account | agreement | manual-customer-service | privacy | problem-feedback | share | food | temperature | clothes | city | weather-suggest | calendar | weather | message | flower
     name: null,
     // string | string[]
     color: '',

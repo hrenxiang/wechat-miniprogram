@@ -7,9 +7,9 @@
 }
 
 .weather_content {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: var(--basic-rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--medium-rem-2);
   font-size: var(--basic-rem);
   line-height: var(--large-rem);
 }
@@ -22,10 +22,11 @@
 
 .weather_city {
   padding: var(--basic-rem) var(--basic-rem);
-  background-color: var(--purple-four);
+  background-color: var(--green-four);
   border-radius: var(--basic-rem);
   display: flex;
   flex-direction: column;
+  gap: var(--basic-rem);
 }
 
 .weather_today {
@@ -36,11 +37,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: var(--basic-rem);
 }
 
 .weather_suggest {
   padding: var(--basic-rem) var(--basic-rem);
-  background-color: var(--green-four);
+  background-color: var(--purple-four);
   border-radius: var(--basic-rem);
 
   display: flex;

@@ -1,0 +1,35 @@
+@import "../../base.css";
+
+.privacy_container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--large-rem);
+  padding: var(--basic-rem) var(--basic-rem) calc(3 * var(--large-rem)) var(--basic-rem) ;
+  background-color: var(--light-mode-one);
+  min-height: 90vh;
+  color: var(--dark);
+  margin-top: var(--large-rem) !important;
+  line-height: var(--large-rem);
+}
+
+.privacy_article_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--large-rem);
+}
+
+.privacy_article_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.privacy_title {
+  font-weight: 600;
+  font-size: var(--basic-rem);
+}
+
+.privacy_article_time {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 auto ;
+}

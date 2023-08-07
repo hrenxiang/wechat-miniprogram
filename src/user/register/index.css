@@ -1,0 +1,151 @@
+@import "../../base.css";
+
+.register_body {
+  background-color: var(--light-mode-one);
+}
+
+.register_body::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  background: var(--purple-three);
+  width: 90vw;
+  height: 90vw;
+  border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  transform: translate(-50%, -50%);
+  animation: border-transform 15s linear infinite;
+  z-index: 1;
+  box-shadow: var(--px-15) var(--px-15) var(--px-10) var(--purple-two);
+}
+
+.register_container {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.register_header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--basic-rem);
+  padding: var(--percent-10) var(--basic-rem) 0 var(--basic-rem);
+  z-index: 2;
+}
+
+.register_header_title {
+  font-weight: 500;
+  font-size: var(--medium-rem-2);
+}
+
+.register_header_content {
+  font-size: var(--basic-rem);
+  color: var(--dark-60);
+}
+
+.register_form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--large-rem);
+  padding: 0 var(--basic-rem);
+  z-index: 2;
+}
+
+.register_form_item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--basic-rem);
+  padding: var(--basic-rem) 0;
+}
+
+.register_form_item > text {
+  font-weight: 600;
+  font-size: var(--basic-rem);
+}
+
+.register_form_item input {
+  border: 1px solid var(--dark);
+  border-radius: var(--px-15);
+  padding: var(--basic-rem) var(--large-rem);
+}
+
+.register_form_agreement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--basic-rem) 0;
+}
+
+.register_agreement_a {
+  color: var(--purple-four);
+}
+
+.register_agreement_agree {
+  height: var(--basic-rem);
+  width: var(--large-rem);
+}
+
+.register_agreement_agree .van-switch__node {
+  height: var(--basic-rem);
+  width: var(--basic-rem);
+  
+}
+
+.register_form_agreement .van-switch--on .van-switch__node {
+  transform: translateX(var(--basic-rem)) !important;
+}
+
+.register_form_agreement .van-switch--on {
+  background-color: var(--pink-four) !important;
+}
+
+.register_form_login {
+  width: 100%;
+  background-color: var(--dark);
+  backdrop-filter: blur(5px);
+  color: var(--light);
+  border-radius: var(--px-15);
+  padding: var(--small-rem) 0;
+  position: relative;
+  margin: var(--large-rem) 0;
+}
+
+.register_form_wx_login {
+  background-color: var(--pink-four);
+  color: black;
+}
+
+.register_form_or {
+  text-align: center;
+  font-size: var(--basic-rem);
+}
+
+.register_form_item_password_body {
+  position: relative;
+}
+
+.register_form_item_password_eye {
+  position: absolute;
+  bottom: 50%;
+  right: 0.5rem;
+  transform: translateY(50%);
+}
+
+.register_sms_code {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--basic-rem);
+  align-items: stretch;
+  
+}
+
+.register_sms_code_button {
+  font-size: var(--basic-rem);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--px-15);
+  background-color: var(--purple-two);
+  margin: 0 !important;
+}

@@ -1,6 +1,8 @@
 /* eslint-disable */
 
 import React from 'react';
+import IconVisibilityOff from './IconVisibilityOff';
+import IconVisibility from './IconVisibility';
 import IconAbout from './IconAbout';
 import IconArrowRight from './IconArrowRight';
 import IconSupport from './IconSupport';
@@ -20,6 +22,8 @@ import IconCalendar from './IconCalendar';
 import IconWeather from './IconWeather';
 import IconMessage from './IconMessage';
 import IconFlower from './IconFlower';
+export { default as IconVisibilityOff } from './IconVisibilityOff';
+export { default as IconVisibility } from './IconVisibility';
 export { default as IconAbout } from './IconAbout';
 export { default as IconArrowRight } from './IconArrowRight';
 export { default as IconSupport } from './IconSupport';
@@ -42,6 +46,10 @@ export { default as IconFlower } from './IconFlower';
 
 const IconFont = ({ name, ...rest }) => {
   switch (name) {
+    case 'visibility_off':
+      return <IconVisibilityOff {...rest} />;
+    case 'visibility':
+      return <IconVisibility {...rest} />;
     case 'about':
       return <IconAbout {...rest} />;
     case 'arrow-right':
