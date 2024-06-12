@@ -77,7 +77,8 @@ const Register = () => {
             id: userProfile.id
           })
         );
-
+        
+        //测试
         Taro.reLaunch({
           url: "/subpage/my/index"
         })
